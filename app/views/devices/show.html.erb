@@ -1,0 +1,22 @@
+<a href="<%= devices_path %>">Return</a>
+<br/>
+<h1>Device detail information</h1>
+<ul>
+  <li>
+    <span>Name: </span> <%= @device.name %>
+  </li>
+  <li>
+    <span>Manager: </span> <%= @device.manager %>
+  </li>
+  <li>
+    <span>Location: </span> <%= @device.location %>
+  </li>
+  <li>
+    <% if !@device.warranty.nil? %>
+      <%= @device.warranty ? "In Warranty" : "Out of Warranty" %>
+      <% if @device.warranty_expired.present? %>
+        <br/><span>Expired: </span> <%= @device.warranty_expired %>
+      <% end %>
+    <% end %>
+  </li>
+</ul>

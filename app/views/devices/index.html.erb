@@ -1,0 +1,11 @@
+<div class="devices">
+  <a href="<%= new_device_path %>">Add new device</a>
+  <ul class="list">
+    <% @devices.each do |device| %>
+      <li>
+        <span><%= device.name %></span>
+        [ <a href="<%= device_path(device) %>">Detail</a> ]
+      </li>
+    <% end if @devices.present? %>
+  </ul>
+</div>

@@ -1,0 +1,23 @@
+<h1>New device registration</h1>
+<div class="device_edition">
+  <%= form_for @device do |f| %>
+    <p>
+      <%= f.label :name %><br/>
+      <%= f.text_field :name, placeholder: 'Apple Iphone 5c' %>
+    </p>
+    <p>
+      <%= f.label :location %><br/>
+      <%= f.text_field :location, placeholder: 'Russia, Moscow' %>
+    </p>
+    <p>
+      <%= f.label :imei %><br/>
+      <%= f.text_field :imei, placeholder: '9320490235' %>
+    </p>
+    <p>
+      <%= f.label :manager %><br/>
+      <%= f.text_field :manager, placeholder: 'John Smitt' %>
+    </p>
+    <br/>
+    <%= f.submit 'Create' %>
+  <% end %>
+</div>
